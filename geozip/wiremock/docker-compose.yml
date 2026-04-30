@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: "postgres"
+    container_name: postgres-db
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=santanderDB
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./migration/docker-database-initial.sql:/docker-entrypoint-initdb.d/docker-database-initial.sql
+  wiremock:
+    image: wiremock/wiremock:3.5.2
+    container_name: wiremock-cep
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./wiremock:/home/wiremock
+    command: ["--global-response-templating"]
