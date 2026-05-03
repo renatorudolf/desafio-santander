@@ -4,6 +4,6 @@ import br.com.desafio.geozip.domain.model.Address;
 
 import java.util.Optional;
 
-public interface GetAddressByCepUseCase {
+public interface AddressByCepUseCase {
     Optional<Address> execute(String cep);
 }

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/cep/04831045"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "04831045.json"
+  }
+}

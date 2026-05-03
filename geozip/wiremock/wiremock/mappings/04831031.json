@@ -1,13 +1,13 @@
 {
   "request": {
     "method": "GET",
-    "urlPathPattern": "/cep/([0-9]{8})"
+    "url": "/cep/04831031"
   },
   "response": {
     "status": 200,
     "headers": {
       "Content-Type": "application/json"
     },
-    "bodyFileName": "cep-response.json"
+    "bodyFileName": "04831031.json"
   }
 }
