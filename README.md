@@ -1,11 +1,5 @@
 # GeoZip - Desafio Santander
 
-<!-- README-I18N:START -->
-
-[English](./README.md) | **Português**
-
-<!-- README-I18N:END -->
-
 Este repositório contém a solução para o **Desafio Santander**, que consiste em um microserviço para consulta de CEPs brasileiros. O projeto foi desenvolvido com Java 21 e Spring Boot, seguindo os princípios da **Arquitetura Hexagonal (Ports and Adapters)**.
 
 ## 📂 Estrutura do Projeto
