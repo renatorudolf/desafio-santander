@@ -19,4 +19,5 @@ wiremock:
 
 spring.classformat.ignore: true
 
+
 #curl -X GET "http://localhost:8080/api/cep?cep=04831031"
