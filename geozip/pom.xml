@@ -117,6 +117,19 @@
                                                 <goals>
                                                         <goal>prepare-agent</goal>
                                                 </goals>
+                                                <configuration>
+                                                        <includes>
+                                                                <include>br/com/desafio/geozip/**</include>
+                                                        </includes>
+                                                        <excludes>
+                                                                <exclude>**/*$MockitoMock$*</exclude>
+                                                                <exclude>**/*$MockitoMock$*.*</exclude>
+                                                                <exclude>**/*$HibernateProxy$*</exclude>
+                                                                <exclude>**/*$HibernateInstantiator$*</exclude>
+                                                                <exclude>java/sql/**</exclude>
+                                                                <exclude>sun/**</exclude>
+                                                        </excludes>
+                                                </configuration>
                                         </execution>
                                         <execution>
                                                 <id>report</id>
