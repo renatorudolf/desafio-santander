@@ -55,6 +55,17 @@
                         <scope>test</scope>
                 </dependency>
                 <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.wiremock</groupId>
+                    <artifactId>wiremock-standalone</artifactId>
+                    <version>3.9.1</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
                     <groupId>org.projectlombok</groupId>
                     <artifactId>lombok-mapstruct-binding</artifactId>
                     <version>0.2.0</version>
@@ -113,6 +124,16 @@
                                                 <goals>
                                                         <goal>report</goal>
                                                 </goals>
+                                                <configuration>
+                                                        <excludes>
+                                                                <exclude>br/com/desafio/geozip/adapter/in/rest/*DTO.class</exclude>
+                                                                <exclude>br/com/desafio/geozip/adapter/out/persistence/*Entity.class</exclude>
+                                                                <exclude>br/com/desafio/geozip/domain/model/*.class</exclude>
+                                                                <exclude>br/com/desafio/geozip/adapter/out/wiremock/WiremockAddressResponse.class</exclude>
+                                                                <exclude>br/com/desafio/geozip/GeozipApplication.class</exclude>
+                                                                <exclude>br/com/desafio/geozip/ServletInitializer.class</exclude>
+                                                        </excludes>
+                                                </configuration>
                                         </execution>
                                 </executions>
                         </plugin>

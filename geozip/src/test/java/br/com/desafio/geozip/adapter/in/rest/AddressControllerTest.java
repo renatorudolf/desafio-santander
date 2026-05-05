@@ -30,7 +30,7 @@ class AddressControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private AddressByCepUseCase getAddressByCepUseCase;
+    private AddressByCepUseCase addressByCepUseCase;
 
     @MockBean
     private AddressMapper addressMapper;
@@ -46,7 +46,7 @@ class AddressControllerTest {
         responseDTO.setCep("04831031");
         responseDTO.setLogradouro("Avenida Interlagos");
 
-        when(getAddressByCepUseCase.execute("04831031")).thenReturn(Optional.of(address));
+        when(addressByCepUseCase.execute("04831031")).thenReturn(Optional.of(address));
         when(addressMapper.toDTO(address)).thenReturn(responseDTO);
 
         mockMvc.perform(get("/api/cep").param("cep", "04831031"))
@@ -66,7 +66,7 @@ class AddressControllerTest {
         responseDTO.setCep("04831045");
         responseDTO.setLogradouro("Rua Manuel de Teffé");
 
-        when(getAddressByCepUseCase.execute("04831045")).thenReturn(Optional.of(address));
+        when(addressByCepUseCase.execute("04831045")).thenReturn(Optional.of(address));
         when(addressMapper.toDTO(address)).thenReturn(responseDTO);
 
         mockMvc.perform(get("/api/cep").param("cep", "04831045"))
@@ -78,7 +78,7 @@ class AddressControllerTest {
     @Test
     @DisplayName("Deve retornar 404 quando o CEP não for encontrado")
     void shouldReturn404WhenCepNotFound() throws Exception {
-        when(getAddressByCepUseCase.execute("12345678")).thenThrow(new CepNotFoundException("CEP não encontrado"));
+        when(addressByCepUseCase.execute("12345678")).thenThrow(new CepNotFoundException("CEP não encontrado"));
 
         mockMvc.perform(get("/api/cep").param("cep", "12345678"))
                 .andExpect(status().isNotFound())
@@ -88,7 +88,7 @@ class AddressControllerTest {
     @Test
     @DisplayName("Deve retornar 400 quando o CEP for inválido")
     void shouldReturn400WhenCepIsInvalid() throws Exception {
-        when(getAddressByCepUseCase.execute("123")).thenThrow(new InvalidCepException("faltam dados"));
+        when(addressByCepUseCase.execute("123")).thenThrow(new InvalidCepException("faltam dados"));
 
         mockMvc.perform(get("/api/cep").param("cep", "123"))
                 .andExpect(status().isBadRequest())
@@ -98,7 +98,7 @@ class AddressControllerTest {
     @Test
     @DisplayName("Deve retornar 400 quando o CEP não for informado")
     void shouldReturn400WhenCepIsMissing() throws Exception {
-        when(getAddressByCepUseCase.execute(null)).thenThrow(new InvalidCepException("faltam dados"));
+        when(addressByCepUseCase.execute(null)).thenThrow(new InvalidCepException("faltam dados"));
 
         mockMvc.perform(get("/api/cep"))
                 .andExpect(status().isBadRequest())

@@ -7,9 +7,10 @@ A GeoZip API é um microserviço desenvolvido em Spring Boot para consulta de en
 - **Java 21**
 - **Spring Boot 3.4.0**
 - **Spring Data JPA**
-- **PostgreSQL**
+- **PostgreSQL** (Produção)
+- **H2 Database** (Testes Integrados)
 - **Maven**
-- **JaCoCo** (Cobertura de Testes)
+- **JaCoCo** (Cobertura de Testes - Focado em lógica de negócio)
 - **Wiremock** (Mock de serviços externos)
 
 ## 🏗️ Arquitetura
@@ -88,6 +89,10 @@ Retorna as informações de endereço para um CEP válido (8 dígitos numéricos
 ## 📝 Registro de Consultas
 
 Sempre que uma consulta de CEP é realizada com sucesso, os dados são persistidos no banco de dados na tabela de logs (`search_log`), permitindo auditoria e histórico de pesquisas.
+
+---
+Desenvolvido como parte do Desafio Santander.
+ de dados na tabela de logs (`search_log`), permitindo auditoria e histórico de pesquisas.
 
 ---
 Desenvolvido como parte do Desafio Santander.

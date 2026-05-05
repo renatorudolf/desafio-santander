@@ -28,7 +28,7 @@ class AddressByCepUseCaseImplTest {
     private SearchLogPersistencePort searchLogPersistencePort;
 
     @InjectMocks
-    private GetAddressByCepUseCaseImpl useCase;
+    private AddressByCepUseCaseImpl useCase;
 
     private Address sampleAddress;
 

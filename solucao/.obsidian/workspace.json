@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "00480a2ea11c2670",
+        "id": "3e77bb5587a9b6fb",
         "type": "tabs",
         "children": [
           {
-            "id": "889c472b5477a78b",
+            "id": "f2fa4f3264df7cee",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/desafio-santander-solucao.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "desafio-santander-solucao.excalidraw"
             }
           }
         ]
@@ -181,9 +183,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "889c472b5477a78b",
+  "active": "f2fa4f3264df7cee",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-04-29 22.06.51.excalidraw.md",
+    "Excalidraw/desafio-santander-solucao.excalidraw.md",
     "Excalidraw/Drawing 2026-04-29 22.06.01.excalidraw.md",
     "Untitled.md",
     "Excalidraw/Drawing 2026-04-29 22.04.58.excalidraw.md",

@@ -13,12 +13,12 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
-public class GetAddressByCepUseCaseImpl implements AddressByCepUseCase {
+public class AddressByCepUseCaseImpl implements AddressByCepUseCase {
 
     private final AddressExternalServicePort addressExternalServicePort;
     private final SearchLogPersistencePort searchLogPersistencePort;
 
-    public GetAddressByCepUseCaseImpl(
+    public AddressByCepUseCaseImpl(
             AddressExternalServicePort addressExternalServicePort,
             SearchLogPersistencePort searchLogPersistencePort) {
         this.addressExternalServicePort = addressExternalServicePort;
