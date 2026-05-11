@@ -1,40 +1,40 @@
-# GeoZip - Desafio Santander
+# GeoZip - Santander Challenge
 
-Este repositório contém a solução para o **Desafio Santander**, que consiste em um microserviço para consulta de CEPs brasileiros. O projeto foi desenvolvido com Java 21 e Spring Boot, seguindo os princípios da **Arquitetura Hexagonal (Ports and Adapters)**.
+This repository contains the solution for the **Santander Challenge**, a resilient microservice for querying Brazilian ZIP codes (CEP). The project is developed with **Java 21** and **Spring Boot 3.4**, strictly following **Hexagonal Architecture (Ports and Adapters)** principles.
 
-## 📂 Estrutura do Projeto
+## 📂 Project Structure
 
-- **[geozip/](./geozip/)**: A aplicação Java principal (Spring Boot).
-- **[ia/](./ia/)**: Recursos de desenvolvimento assistido por IA, incluindo skills personalizadas e prompts utilizados.
-- **[solucao/](./solucao/)**: Desenho da arquitetura e diagramas da solução (Excalidraw).
+- **[geozip/](./geozip/)**: The core Java application (Spring Boot).
+- **[ia/](./ia/)**: AI-assisted development resources, including custom skills and prompts used.
+- **[solucao/](./solucao/)**: Architectural design and solution diagrams (Excalidraw).
 
-## 🚀 Tecnologias
+## 🚀 Technology Stack
 
-- **Java 21**
+- **Java 21** (LTS)
 - **Spring Boot 3.4.0**
 - **Spring Data JPA**
-- **PostgreSQL** (Produção)
-- **H2 Database** (Testes)
+- **PostgreSQL** (Production)
+- **H2 Database** (Testing)
 - **Maven**
 - **MapStruct**
-- **JaCoCo** (Cobertura de Testes - Lógica de Negócio)
-- **Wiremock** (Mock de serviços externos)
+- **JaCoCo** (Business Logic Test Coverage)
+- **Wiremock** (External Service Mocking)
 
-## 🏗️ Arquitetura
+## 🏗️ Architectural Vision
 
-O projeto segue o padrão de Arquitetura Hexagonal para garantir alto desacoplamento e facilidade de manutenção:
+The project leverages Hexagonal Architecture to ensure high decoupling and long-term maintainability:
 
-- **Domain**: Entidades de negócio (`Address`, `SearchLog`) e exceções de domínio.
-- **Application**: Portas de entrada/saída e implementação de casos de uso (`AddressByCepUseCaseImpl`).
-- **Adapters (In)**: Controladores REST.
-- **Adapters (Out)**: Persistência (JPA) e integrações externas (Wiremock).
-- **Infrastructure**: Configurações transversais, como Beans do Spring e tratamento global de exceções.
+- **Domain**: Pure business entities (`Address`, `SearchLog`) and domain exceptions.
+- **Application**: Input/Output ports and Use Case implementations (`AddressByCepUseCaseImpl`).
+- **Adapters (In)**: REST Controllers and entry points.
+- **Adapters (Out)**: Persistence (JPA) and external integrations (Third-party Address APIs).
+- **Infrastructure**: Cross-cutting concerns, Spring configurations, and Global Exception Handling.
 
-## 🛠️ Como Executar
+## 🛠️ Getting Started
 
-Para instruções detalhadas sobre como configurar, executar e testar a aplicação, consulte a documentação na pasta da aplicação:
+For detailed instructions on setup, execution, and testing, please refer to the application-specific documentation:
 
-👉 **[Ir para geozip/README.md](./geozip/README.md)**
+👉 **[Go to geozip/README_EN.md](./geozip/README_EN.md)**
 
 ---
-Desenvolvido como parte do Desafio Santander.
+*Developed as a high-standard technical showcase for Senior Software Engineering roles.*
